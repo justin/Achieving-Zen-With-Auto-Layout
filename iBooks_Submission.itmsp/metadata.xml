@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<package xmlns="http://apple.com/itunes/importer/publication" version="publication5.0">
+    <provider>JustinWilliams271957521</provider>
+    <book>
+        <vendor_id>10080502655</vendor_id>
+        <metadata>
+            <publication_type>book</publication_type>
+            <title>Achieving Zen With Auto Layout</title>
+            <subtitle>2nd Edition</subtitle>
+            <contributors>
+                <contributor>
+                    <primary>true</primary>
+                    <name>Justin Williams</name>
+                    <roles>
+                        <role>author</role>
+                    </roles>
+                </contributor>
+            </contributors>
+            <languages>
+                <language type="main">eng</language>
+            </languages>
+            <number_of_pages>208</number_of_pages>
+            <subjects>
+                <subject primary="true" scheme="bisac">TEC044000</subject>
+            </subjects>
+            <description format="html">Auto Layout is the future of laying out your user interfaces on Apple's OS X and iOS platforms. While powerful, Auto Layout also comes with a fairly steep learning curve that can cause headaches for many developers.&lt;br&gt;
+Justin Williams aims to demystify Auto Layout for you by building a foundation based on the history of Auto Layout, its key terminology, and real-world applications of its power in an easy to read eBook.&lt;br&gt;
+&lt;b&gt;What's Covered&lt;/b&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;An introduction to Auto Layout&lt;/li&gt;
+&lt;li&gt;The history of Auto Layout&lt;/li&gt;
+&lt;li&gt;How Auto Layout works behind the scenes&lt;/li&gt;
+&lt;li&gt;Key terminology to achieve zen&lt;/li&gt;
+&lt;li&gt;Mastering constraints in Interface Builder &lt;/li&gt;
+&lt;li&gt;Dealing with ambiguity and conflicting constraints&lt;/li&gt;
+&lt;li&gt;Working with localization&lt;/li&gt;
+&lt;li&gt;Size Classes and Auto Layout&lt;/li&gt;
+&lt;li&gt;Layout Guides&lt;/li&gt;
+&lt;li&gt;Layout Anchors&lt;/li&gt;
+&lt;li&gt;Working with margins&lt;/li&gt;
+&lt;li&gt;Animation&lt;/li&gt;
+&lt;li&gt;Debugging constraints&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+            <publisher>Second Gear Publishing</publisher>
+            <preorder_previews>true</preorder_previews>
+            <explicit>false</explicit>
+            <publication_date>2015-08-18</publication_date>
+            <products>
+                <product>
+                    <territory>AR</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>30</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="USD"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>AU</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>40</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="AUD"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>AT</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>40</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="EUR"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>BE</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>40</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="EUR"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>BO</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>30</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="USD"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>BR</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>30</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="USD"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>BG</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>40</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="EUR"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>CA</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>39</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="CAD"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>CL</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>30</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="USD"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>CO</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>30</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="USD"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>CR</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>30</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="USD"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>CY</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>40</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="EUR"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>CZ</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>40</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="EUR"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>DK</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>40</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="DKK"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>DO</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>30</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="USD"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>EC</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>30</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="USD"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>SV</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>30</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="USD"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>EE</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>40</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="EUR"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>FI</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>40</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="EUR"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>FR</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>40</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="EUR"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>DE</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>40</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="EUR"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>GR</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>40</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="EUR"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>GT</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>30</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="USD"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>HN</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>30</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="USD"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>HU</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>40</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="EUR"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>IE</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>40</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="EUR"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>IT</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>40</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="EUR"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>JP</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>39</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="JPY"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>LV</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>40</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="EUR"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>LT</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>40</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="EUR"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>LU</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>40</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="EUR"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>MT</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>40</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="EUR"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>MX</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>40</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="MXN"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>NL</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>40</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="EUR"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>NZ</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>40</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="NZD"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>NI</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>30</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="USD"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>NO</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>40</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="NOK"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>PA</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>30</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="USD"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>PY</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>30</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="USD"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>PE</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>30</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="USD"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>PL</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>40</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="EUR"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>PT</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>40</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="EUR"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>RO</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>40</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="EUR"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>SK</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>40</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="EUR"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>SI</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>40</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="EUR"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>ES</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>40</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="EUR"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>SE</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>40</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="SEK"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>CH</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>39</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="CHF"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>GB</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>33</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="GBP"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>US</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>30</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="USD"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+                <product>
+                    <territory>VE</territory>
+                    <cleared_for_sale>true</cleared_for_sale>
+                    <price_tier>30</price_tier>
+                    <release_type>digital-only</release_type>
+                    <physical_list_price currency="USD"></physical_list_price>
+                    <drm_free>false</drm_free>
+                </product>
+            </products>
+            <audience_info>
+                <audience scheme="interest-age-years">
+                    <range>
+                        <min_value>13</min_value>
+                    </range>
+                </audience>
+            </audience_info>
+        </metadata>
+        <assets>
+            <asset type="artwork">
+                <data_file>
+                    <file_name>Cover-Art.jpg</file_name>
+                    <size>262250</size>
+                    <checksum type="md5">b939b752936e1f8b17223e099c025828</checksum>
+                </data_file>
+            </asset>
+            <asset type="full">
+                <data_file>
+                    <file_name>Achieving_Zen_with_Auto_Layout.epub</file_name>
+                    <size>1643458</size>
+                    <checksum type="md5">94a8c6d06b4a2b3e5b0dbe328ad1b468</checksum>
+                </data_file>
+            </asset>
+        </assets>
+    </book>
+</package>

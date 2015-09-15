@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Even_Distribution" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CtS-Uw-nXd">
+                                <rect key="frame" x="200" y="152" width="200" height="100"/>
+                                <color key="backgroundColor" red="0.4941176471" green="0.82745098039999998" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AGi-ck-pGl">
+                                <rect key="frame" x="200" y="284" width="200" height="100"/>
+                                <color key="backgroundColor" red="0.4941176471" green="0.82745098039999998" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Pa-GC-Hvt">
+                                <rect key="frame" x="200" y="490" width="200" height="100"/>
+                                <color key="backgroundColor" red="0.4941176471" green="0.82745098039999998" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JX4-GU-Xx1">
+                                <rect key="frame" x="200" y="20" width="200" height="100"/>
+                                <color key="backgroundColor" red="0.4941176471" green="0.82745098039999998" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="DDo-Vc-AZL"/>
+                                    <constraint firstAttribute="height" constant="100" id="WAp-Sy-DbU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Pa-GC-Hvt" firstAttribute="top" secondItem="AGi-ck-pGl" secondAttribute="bottom" constant="106" placeholder="YES" id="58m-2t-2bE"/>
+                            <constraint firstItem="JX4-GU-Xx1" firstAttribute="width" secondItem="CtS-Uw-nXd" secondAttribute="width" id="Bj3-nx-c2q"/>
+                            <constraint firstItem="JX4-GU-Xx1" firstAttribute="height" secondItem="2Pa-GC-Hvt" secondAttribute="height" id="Cs4-QR-tRf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2Pa-GC-Hvt" secondAttribute="bottom" constant="10" id="Ctb-Zd-Yma"/>
+                            <constraint firstItem="JX4-GU-Xx1" firstAttribute="height" secondItem="AGi-ck-pGl" secondAttribute="height" id="G0O-tZ-tfG"/>
+                            <constraint firstItem="JX4-GU-Xx1" firstAttribute="width" secondItem="AGi-ck-pGl" secondAttribute="width" id="I3h-wW-kKg"/>
+                            <constraint firstItem="JX4-GU-Xx1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="JHA-Ya-hkI"/>
+                            <constraint firstItem="AGi-ck-pGl" firstAttribute="top" secondItem="CtS-Uw-nXd" secondAttribute="bottom" constant="32" placeholder="YES" id="PM3-gF-gsr"/>
+                            <constraint firstItem="JX4-GU-Xx1" firstAttribute="centerX" secondItem="2Pa-GC-Hvt" secondAttribute="centerX" id="TYZ-lc-gGX"/>
+                            <constraint firstItem="JX4-GU-Xx1" firstAttribute="width" secondItem="2Pa-GC-Hvt" secondAttribute="width" id="TbB-JC-9C0"/>
+                            <constraint firstItem="AGi-ck-pGl" firstAttribute="centerX" secondItem="2Pa-GC-Hvt" secondAttribute="centerX" id="fus-lj-6xT"/>
+                            <constraint firstItem="JX4-GU-Xx1" firstAttribute="centerX" secondItem="AGi-ck-pGl" secondAttribute="centerX" id="kTG-ry-TCP"/>
+                            <constraint firstItem="JX4-GU-Xx1" firstAttribute="centerX" secondItem="CtS-Uw-nXd" secondAttribute="centerX" id="nPw-Lh-j0B"/>
+                            <constraint firstItem="JX4-GU-Xx1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qGR-vV-RBc"/>
+                            <constraint firstItem="JX4-GU-Xx1" firstAttribute="height" secondItem="CtS-Uw-nXd" secondAttribute="height" id="tYq-di-FS9"/>
+                            <constraint firstItem="CtS-Uw-nXd" firstAttribute="centerX" secondItem="AGi-ck-pGl" secondAttribute="centerX" id="xKG-ID-fQI"/>
+                            <constraint firstItem="CtS-Uw-nXd" firstAttribute="top" secondItem="JX4-GU-Xx1" secondAttribute="bottom" constant="32" placeholder="YES" id="z5h-HT-AO0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="box1" destination="JX4-GU-Xx1" id="cfx-j5-Hf5"/>
+                        <outlet property="box2" destination="CtS-Uw-nXd" id="7ht-h1-rDZ"/>
+                        <outlet property="box3" destination="AGi-ck-pGl" id="woz-rE-skx"/>
+                        <outlet property="box4" destination="2Pa-GC-Hvt" id="f4K-gJ-5lf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="323" y="519"/>
+        </scene>
+    </scenes>
+</document>
