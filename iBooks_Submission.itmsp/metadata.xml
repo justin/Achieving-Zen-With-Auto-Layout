@@ -24,26 +24,26 @@
                 <subject primary="true" scheme="bisac">TEC044000</subject>
             </subjects>
             <description format="html">Auto Layout is the future of laying out your user interfaces on Apple's OS X and iOS platforms. While powerful, Auto Layout also comes with a fairly steep learning curve that can cause headaches for many developers.&lt;br&gt;
+&lt;br&gt;
 Justin Williams aims to demystify Auto Layout for you by building a foundation based on the history of Auto Layout, its key terminology, and real-world applications of its power in an easy to read eBook.&lt;br&gt;
+&lt;br&gt;
 &lt;b&gt;What's Covered&lt;/b&gt;&lt;br&gt;
 &lt;br&gt;
-&lt;ul&gt;
-&lt;li&gt;An introduction to Auto Layout&lt;/li&gt;
-&lt;li&gt;The history of Auto Layout&lt;/li&gt;
-&lt;li&gt;How Auto Layout works behind the scenes&lt;/li&gt;
-&lt;li&gt;Key terminology to achieve zen&lt;/li&gt;
-&lt;li&gt;Mastering constraints in Interface Builder &lt;/li&gt;
-&lt;li&gt;Dealing with ambiguity and conflicting constraints&lt;/li&gt;
-&lt;li&gt;Working with localization&lt;/li&gt;
-&lt;li&gt;Size Classes and Auto Layout&lt;/li&gt;
-&lt;li&gt;Layout Guides&lt;/li&gt;
-&lt;li&gt;Layout Anchors&lt;/li&gt;
-&lt;li&gt;Working with margins&lt;/li&gt;
-&lt;li&gt;Animation&lt;/li&gt;
-&lt;li&gt;Debugging constraints&lt;/li&gt;
-&lt;/ul&gt;
+	•	An introduction to Auto Layout&lt;br&gt;
+	•	The history of Auto Layout&lt;br&gt;
+	•	How Auto Layout works behind the scenes&lt;br&gt;
+	•	Key terminology to achieve zen&lt;br&gt;
+	•	Mastering constraints in Interface Builder &lt;br&gt;
+	•	Dealing with ambiguity and conflicting constraints&lt;br&gt;
+	•	Working with localization&lt;br&gt;
+	•	Size Classes and Auto Layout&lt;br&gt;
+	•	Layout Guides&lt;br&gt;
+	•	Layout Anchors&lt;br&gt;
+	•	Working with margins&lt;br&gt;
+	•	Animation&lt;br&gt;
+	•	Debugging constraints&lt;br&gt;
 </description>
-            <publisher>Second Gear Publishing</publisher>
+            <publisher>Second Gear Media</publisher>
             <preorder_previews>true</preorder_previews>
             <explicit>false</explicit>
             <publication_date>2015-08-18</publication_date>
@@ -51,7 +51,7 @@ Justin Williams aims to demystify Auto Layout for you by building a foundation b
                 <product>
                     <territory>AR</territory>
                     <cleared_for_sale>true</cleared_for_sale>
-                    <price_tier>30</price_tier>
+                    <price_tier>40</price_tier>
                     <release_type>digital-only</release_type>
                     <physical_list_price currency="USD"></physical_list_price>
                     <drm_free>false</drm_free>
@@ -83,7 +83,7 @@ Justin Williams aims to demystify Auto Layout for you by building a foundation b
                 <product>
                     <territory>BO</territory>
                     <cleared_for_sale>true</cleared_for_sale>
-                    <price_tier>30</price_tier>
+                    <price_tier>40</price_tier>
                     <release_type>digital-only</release_type>
                     <physical_list_price currency="USD"></physical_list_price>
                     <drm_free>false</drm_free>
@@ -91,7 +91,7 @@ Justin Williams aims to demystify Auto Layout for you by building a foundation b
                 <product>
                     <territory>BR</territory>
                     <cleared_for_sale>true</cleared_for_sale>
-                    <price_tier>30</price_tier>
+                    <price_tier>40</price_tier>
                     <release_type>digital-only</release_type>
                     <physical_list_price currency="USD"></physical_list_price>
                     <drm_free>false</drm_free>
@@ -107,7 +107,7 @@ Justin Williams aims to demystify Auto Layout for you by building a foundation b
                 <product>
                     <territory>CA</territory>
                     <cleared_for_sale>true</cleared_for_sale>
-                    <price_tier>39</price_tier>
+                    <price_tier>40</price_tier>
                     <release_type>digital-only</release_type>
                     <physical_list_price currency="CAD"></physical_list_price>
                     <drm_free>false</drm_free>
@@ -115,7 +115,7 @@ Justin Williams aims to demystify Auto Layout for you by building a foundation b
                 <product>
                     <territory>CL</territory>
                     <cleared_for_sale>true</cleared_for_sale>
-                    <price_tier>30</price_tier>
+                    <price_tier>40</price_tier>
                     <release_type>digital-only</release_type>
                     <physical_list_price currency="USD"></physical_list_price>
                     <drm_free>false</drm_free>
@@ -123,7 +123,7 @@ Justin Williams aims to demystify Auto Layout for you by building a foundation b
                 <product>
                     <territory>CO</territory>
                     <cleared_for_sale>true</cleared_for_sale>
-                    <price_tier>30</price_tier>
+                    <price_tier>40</price_tier>
                     <release_type>digital-only</release_type>
                     <physical_list_price currency="USD"></physical_list_price>
                     <drm_free>false</drm_free>
@@ -131,7 +131,7 @@ Justin Williams aims to demystify Auto Layout for you by building a foundation b
                 <product>
                     <territory>CR</territory>
                     <cleared_for_sale>true</cleared_for_sale>
-                    <price_tier>30</price_tier>
+                    <price_tier>40</price_tier>
                     <release_type>digital-only</release_type>
                     <physical_list_price currency="USD"></physical_list_price>
                     <drm_free>false</drm_free>
@@ -163,7 +163,7 @@ Justin Williams aims to demystify Auto Layout for you by building a foundation b
                 <product>
                     <territory>DO</territory>
                     <cleared_for_sale>true</cleared_for_sale>
-                    <price_tier>30</price_tier>
+                    <price_tier>40</price_tier>
                     <release_type>digital-only</release_type>
                     <physical_list_price currency="USD"></physical_list_price>
                     <drm_free>false</drm_free>
@@ -171,7 +171,7 @@ Justin Williams aims to demystify Auto Layout for you by building a foundation b
                 <product>
                     <territory>EC</territory>
                     <cleared_for_sale>true</cleared_for_sale>
-                    <price_tier>30</price_tier>
+                    <price_tier>40</price_tier>
                     <release_type>digital-only</release_type>
                     <physical_list_price currency="USD"></physical_list_price>
                     <drm_free>false</drm_free>
@@ -179,7 +179,7 @@ Justin Williams aims to demystify Auto Layout for you by building a foundation b
                 <product>
                     <territory>SV</territory>
                     <cleared_for_sale>true</cleared_for_sale>
-                    <price_tier>30</price_tier>
+                    <price_tier>40</price_tier>
                     <release_type>digital-only</release_type>
                     <physical_list_price currency="USD"></physical_list_price>
                     <drm_free>false</drm_free>
@@ -227,7 +227,7 @@ Justin Williams aims to demystify Auto Layout for you by building a foundation b
                 <product>
                     <territory>GT</territory>
                     <cleared_for_sale>true</cleared_for_sale>
-                    <price_tier>30</price_tier>
+                    <price_tier>40</price_tier>
                     <release_type>digital-only</release_type>
                     <physical_list_price currency="USD"></physical_list_price>
                     <drm_free>false</drm_free>
@@ -235,7 +235,7 @@ Justin Williams aims to demystify Auto Layout for you by building a foundation b
                 <product>
                     <territory>HN</territory>
                     <cleared_for_sale>true</cleared_for_sale>
-                    <price_tier>30</price_tier>
+                    <price_tier>40</price_tier>
                     <release_type>digital-only</release_type>
                     <physical_list_price currency="USD"></physical_list_price>
                     <drm_free>false</drm_free>
@@ -267,7 +267,7 @@ Justin Williams aims to demystify Auto Layout for you by building a foundation b
                 <product>
                     <territory>JP</territory>
                     <cleared_for_sale>true</cleared_for_sale>
-                    <price_tier>39</price_tier>
+                    <price_tier>40</price_tier>
                     <release_type>digital-only</release_type>
                     <physical_list_price currency="JPY"></physical_list_price>
                     <drm_free>false</drm_free>
@@ -331,7 +331,7 @@ Justin Williams aims to demystify Auto Layout for you by building a foundation b
                 <product>
                     <territory>NI</territory>
                     <cleared_for_sale>true</cleared_for_sale>
-                    <price_tier>30</price_tier>
+                    <price_tier>40</price_tier>
                     <release_type>digital-only</release_type>
                     <physical_list_price currency="USD"></physical_list_price>
                     <drm_free>false</drm_free>
@@ -347,7 +347,7 @@ Justin Williams aims to demystify Auto Layout for you by building a foundation b
                 <product>
                     <territory>PA</territory>
                     <cleared_for_sale>true</cleared_for_sale>
-                    <price_tier>30</price_tier>
+                    <price_tier>40</price_tier>
                     <release_type>digital-only</release_type>
                     <physical_list_price currency="USD"></physical_list_price>
                     <drm_free>false</drm_free>
@@ -355,7 +355,7 @@ Justin Williams aims to demystify Auto Layout for you by building a foundation b
                 <product>
                     <territory>PY</territory>
                     <cleared_for_sale>true</cleared_for_sale>
-                    <price_tier>30</price_tier>
+                    <price_tier>40</price_tier>
                     <release_type>digital-only</release_type>
                     <physical_list_price currency="USD"></physical_list_price>
                     <drm_free>false</drm_free>
@@ -363,7 +363,7 @@ Justin Williams aims to demystify Auto Layout for you by building a foundation b
                 <product>
                     <territory>PE</territory>
                     <cleared_for_sale>true</cleared_for_sale>
-                    <price_tier>30</price_tier>
+                    <price_tier>40</price_tier>
                     <release_type>digital-only</release_type>
                     <physical_list_price currency="USD"></physical_list_price>
                     <drm_free>false</drm_free>
@@ -427,7 +427,7 @@ Justin Williams aims to demystify Auto Layout for you by building a foundation b
                 <product>
                     <territory>CH</territory>
                     <cleared_for_sale>true</cleared_for_sale>
-                    <price_tier>39</price_tier>
+                    <price_tier>40</price_tier>
                     <release_type>digital-only</release_type>
                     <physical_list_price currency="CHF"></physical_list_price>
                     <drm_free>false</drm_free>
@@ -435,7 +435,7 @@ Justin Williams aims to demystify Auto Layout for you by building a foundation b
                 <product>
                     <territory>GB</territory>
                     <cleared_for_sale>true</cleared_for_sale>
-                    <price_tier>33</price_tier>
+                    <price_tier>40</price_tier>
                     <release_type>digital-only</release_type>
                     <physical_list_price currency="GBP"></physical_list_price>
                     <drm_free>false</drm_free>
@@ -443,7 +443,7 @@ Justin Williams aims to demystify Auto Layout for you by building a foundation b
                 <product>
                     <territory>US</territory>
                     <cleared_for_sale>true</cleared_for_sale>
-                    <price_tier>30</price_tier>
+                    <price_tier>40</price_tier>
                     <release_type>digital-only</release_type>
                     <physical_list_price currency="USD"></physical_list_price>
                     <drm_free>false</drm_free>
@@ -451,7 +451,7 @@ Justin Williams aims to demystify Auto Layout for you by building a foundation b
                 <product>
                     <territory>VE</territory>
                     <cleared_for_sale>true</cleared_for_sale>
-                    <price_tier>30</price_tier>
+                    <price_tier>40</price_tier>
                     <release_type>digital-only</release_type>
                     <physical_list_price currency="USD"></physical_list_price>
                     <drm_free>false</drm_free>
@@ -466,18 +466,18 @@ Justin Williams aims to demystify Auto Layout for you by building a foundation b
             </audience_info>
         </metadata>
         <assets>
-            <asset type="artwork">
-                <data_file>
-                    <file_name>Cover-Art.jpg</file_name>
-                    <size>262250</size>
-                    <checksum type="md5">b939b752936e1f8b17223e099c025828</checksum>
-                </data_file>
-            </asset>
             <asset type="full">
                 <data_file>
                     <file_name>Achieving_Zen_with_Auto_Layout.epub</file_name>
                     <size>1643458</size>
                     <checksum type="md5">94a8c6d06b4a2b3e5b0dbe328ad1b468</checksum>
+                </data_file>
+            </asset>
+            <asset type="artwork">
+                <data_file>
+                    <file_name>Achieving_Zen_with_AL_-_JW_-_2014_final_1400x1812.png</file_name>
+                    <size>117450</size>
+                    <checksum type="md5">80761bba86b2420214fcbe1889efd69d</checksum>
                 </data_file>
             </asset>
         </assets>
