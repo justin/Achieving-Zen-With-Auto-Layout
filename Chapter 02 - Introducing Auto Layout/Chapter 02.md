@@ -29,7 +29,7 @@ The present-day OS X and iOS operating systems are both based off that NeXTSTEP 
 
 One of the key features of the Interface Builder paradigm is the concept of Springs & Struts. Springs & Struts allow a developer to easily handle a variety of different layout situations in a static manner. Interface Builder allows you to set specific springs and struts to define how a view or window should resize when faced with the task.
 
-For instance, say you want a button to be pinned to the upper-right edge of the window no matter the size of the window. You could also specify you want a `UITextField` or `NSTextView` to be the entire width of its superview, but a fixed 250pt for its height.
+For instance, say you want a button to be pinned to the upper-right edge of the window no matter the size of the window. You could also specify you want a `UITextField` or `NSTextView` to be the entire width of its superview but a fixed 250pt for its height.
 
 The Springs & Struts way of developing interfaces is what I refer to as absolute layout.
 
@@ -84,37 +84,37 @@ Each of these descriptions can be turned into a constraint that we can apply to 
 Constraints are applied to the superview of the views you are expressing the relationship between. Looking at our Orange Box example, you'd define the constraints like so:
 
 ~~~swift
-// Setup the orange box.
+// Set up the orange box.
 let viewFrame = self.view.bounds
 
-// Half the width of the view frame.
+// One-half the width of the view frame.
 let width = round(CGRectGetWidth(viewFrame) / 2)
 
-// 1/4 the height of the view frame.
+// One-fourth the height of the view frame.
 let height = round(CGRectGetHeight(viewFrame) / 4)
 
-// Establishing the width to be half the view width
+// Establish the width to be one-half the view width.
 self.view.addConstraint(self.centeredView.widthAnchor.
 		constraintEqualToConstant(width))
 
-// Establishing the width to be 1/4 the view height
+// Establish the width to be one-fourth the view height.
 self.view.addConstraint(self.centeredView.heightAnchor.
 		constraintEqualToConstant(height))
 
-// We want our view to be centered horizontally.
+// Center the view horizontally.
 self.view.addConstraint(self.centeredView.centerXAnchor.
 		constraintEqualToAnchor(self.view.centerXAnchor))
 
-// And vertically.
+// Center the view vertically.
 self.view.addConstraint(self.centeredView.centerYAnchor.
 		constraintEqualToAnchor(self.view.centerYAnchor))
 ~~~
 
 I'm sure I can guess your first reaction to that code block.
 
-Oh my god that is more code than the previous example!
+Oh my god, that is more code than the previous example!
 
-You're correct. It is more code on a line count basis, but it is also more expressive code. We are defining four constraint-based relationships between our superview and the `orangeBoxView`. You write this code once, and then Auto Layout handles maintaining those relationships the rest of the time, no matter what orientation or size of views you are working with.
+You're correct. It is more code on a line-count basis, but it is also more expressive code. We are defining four constraint-based relationships between our superview and the `orangeBoxView`. You write this code once, and then Auto Layout handles maintaining those relationships the rest of the time, no matter what orientation or size of views you are working with.
 
 Don't worry if you don't fully understand the code. I'll explain it in detail in upcoming chapters.
 
@@ -122,7 +122,7 @@ Don't worry if you don't fully understand the code. I'll explain it in detail in
 
 If the previous example hasn't scared you away yet, let me try to convince you why Apple created Auto Layout in the first place.
 
-It's not that the traditional absolute layout system was bad necessarily, but the folks in Cupertino believed they could create something better. With Auto Layout they did just that in the following ways.
+It's not that the traditional absolute layout system was bad necessarily, but the folks in Cupertino believed they could create something better. With Auto Layout, they did just that in the following ways.
 
 #### Extend the Usefulness of Interface Builder
 
@@ -142,7 +142,7 @@ This allows you to write (and manage) less code than before.
 
 #### Improve Layout Code
 
-What about those times that you actually need or want to write layout code? Auto Layout makes managing that code easier than before. The ASCII-Art formatting language Auto Layout provides makes it easy to go back to code you wrote months ago and get back up to speed on what its purpose is.
+What about those times when you actually need or want to write layout code? Auto Layout makes managing that code easier than before. The ASCII-Art formatting language Auto Layout provides makes it easy to go back to code you wrote months ago and get back up to speed on what its purpose is.
 
 ~~~swift
 self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat
@@ -154,7 +154,7 @@ In the example above, I'm defining a row of buttons that should fill the width o
 
 #### Move View Logic Back to the View
 
-As applications have gotten more complex over the years, the acronym MVC has stopped standing for "Model-View-Controller" and instead for "Massive View Controller." In addition to providing view lifecycle and rotation information for our application, both `UIViewController` and `NSViewController` have seemingly become dumping grounds for anything from data sources, delegates, and configuring and laying out custom views.
+As applications have gotten more complex over the years, the acronym MVC has stopped standing for "Model-View-Controller" and could instead stand for "Massive View Controller." In addition to providing view lifecycle and rotation information for our application, both `UIViewController` and `NSViewController` have seemingly become dumping grounds for anything from data sources, delegates, and configuring and laying out custom views.
 
 Auto Layout has the concept of an `intrinsicContentSize` that promises to provide a predefined `CGSize` value for the width and height of certain views. This moves code that would be related to calculating the size of views out of your view controllers and back into those `UIView` subclasses where they belong.
 
@@ -164,11 +164,11 @@ Another concept introduced with Auto Layout is alignment rects, which can be use
 
 With such a drastic shift in the visual language of iOS 7, developers who were tasked with keeping a version of their app that supported both the legacy UI of iOS 6 and the modern decor of 7 were faced with a lot of frustration. Auto Layout eased some of that pain by accounting for those differences in metrics for you if you were using constraint-based layout. Though the size of the control may be different, its relationships with its parent and sibling views may not necessarily be.
 
-Auto Layout also makes it easier to opt-in to supporting the new Dynamic Text System of iOS 7, which allows the user to customize the size of text in apps based on a system-wide setting, thanks to things like alignment rects and the intrinsic content size. When those values change, Auto Layout takes care of the heavy lifting of adjusting your interface to match the user's preferences with your interface design.
+Auto Layout also makes it easier to opt in to supporting the new Dynamic Text System of iOS 7, which allows the user to customize the size of text in apps based on a system-wide setting, thanks to things like alignment rects and the intrinsic content size. When those values change, Auto Layout takes care of the heavy lifting of adjusting your interface to match the user's preferences with your interface design.
 
 #### Easily Apply Maximums and Minimums
 
-With Auto Layout you can be more expressive with your interface requirements without having to be explicit. For instance, you can define a button to be at least 100pt wide, but no more than 250pt wide, depending on how much of the view it needs to take up.
+With Auto Layout, you can be more expressive with your interface requirements without having to be explicit. For instance, you can define a button to be at least 100pt wide but no more than 250pt wide, depending on how much of the view it needs to take up.
 
 ~~~swift
 self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat
@@ -182,7 +182,7 @@ Doing this using the absolute layout system involved a lot of heavy math calcula
 
 Depending on the size of the screen or window you are working with, some portions of your UI may not be as important as others. For example, if you're laying out three labels and want to ensure that one will never be truncated, you can set it to have a higher priority than the views adjacent to it. Then when the labels are cramped for space, the others will truncate while the higher priority label will remain fully expanded.
 
-Auto Layout calls this the **content hugging** and **compression resistance** priorities. We'll cover these more in depth in a later chapter.
+Auto Layout calls this the **content hugging** and **compression resistance** priorities. We'll cover these more in-depth in a later chapter.
 
 ### Zen?
 
