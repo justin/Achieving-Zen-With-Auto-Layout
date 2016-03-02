@@ -76,45 +76,31 @@ let isPhone = (device.userInterfaceIdiom == UIUserInterfaceIdiom.Phone)
 let isFivePhone = (screenHeight == 568.0)
 let isSixPhone = (screenHeight == 667.0)
 let isSixPlusPhone = (screenHeight == 736.0)
-if (UIDeviceOrientationIsPortrait(currentOrientation) == true)
-{
-    // Do Portrait Things.
-    if (isPhone == true)
-    {
-        // Don't deny you've done this at least once.
-        if (isFivePhone == true)
-        {
-            // iPhone 5+
-        }
-        else if (isSixPhone == true)
-        {
-            // iPhone 6
-        }
-        else if (isSixPlusPhone == true)
-        {
-            // iPhone 6 Plus
-        }
-        else
-        {
-            // Old iPhones
-        }
+if (UIDeviceOrientationIsPortrait(currentOrientation) == true) {
+  // Do Portrait Things.
+  if (isPhone == true) {
+    // Don't deny you've done this at least once.
+    if (isFivePhone == true) {
+      // iPhone 5+
     }
-    else
-    {
-        // Do Portrait iPad Things.
+    else if (isSixPhone == true) {
+      // iPhone 6
     }
-}
-else
-{
-    // Do Landscape Things.
-    if (isPhone == YES)
-    {
-        // Do Landscape iPhone Things.
+    else if (isSixPlusPhone == true) {
+      // iPhone 6 Plus
+    } else {
+      // Old iPhones
     }
-    else
-    {
-        // Do Landscape iPad Things.
-    }
+  } else {
+      // Do Portrait iPad Things.
+  }
+} else {
+  // Do Landscape Things.
+  if (isPhone == YES) {
+    // Do Landscape iPhone Things.
+  } else {
+    // Do Landscape iPad Things.
+  }
 }
 ~~~
 
@@ -168,30 +154,29 @@ Now, let's build and run our application in the iPhone simulator. You'll notice 
 In fact, if you add the following lines of code to your `ViewController` implementation, you can see exactly what is going on:
 
 ~~~swift
-override func viewDidLayoutSubviews()
-{
-    super.viewDidLayoutSubviews()
-    print("self.view.constraints = \(self.view.constraints)")
+override func viewDidLayoutSubviews() {
+  super.viewDidLayoutSubviews()
+  print("self.view.constraints = \(self.view.constraints)")
 }
 ~~~
 
 Now if you run the application, you'll see a giant array of auto-generated constraints printed into the debugging console.
 
-    self.view.constraints = [<_UILayoutSupportConstraint:0x7ff23b418150
-    V:[_UILayoutGuide:0x7ff23b4232c0(20)]>, <_UILayoutSupportConstraint:
-    0x7ff23b426170 V:|-(0)-[_UILayoutGuide:0x7ff23b4232c0]
-    (Names: '|':UIView:0x7ff23b418c80 )>,
-    <_UILayoutSupportConstraint:0x7ff23b41b7d0
-    V:[_UILayoutGuide:0x7ff23b423f70(0)]>,
-    <_UILayoutSupportConstraint:0x7ff23b417860
-    _UILayoutGuide:0x7ff23b423f70.bottom == UIView:0x7ff23b418c80.bottom>,
-    <NSIBPrototypingLayoutConstraint:0x7ff23b425000 'IB auto generated at build
-    time for view with fixed frame' H:|-(129)-[UILabel:0x7ff23b419040'Label']
-    (LTR)   (Names: '|':UIView:0x7ff23b418c80 )>,
-    <NSIBPrototypingLayoutConstraint:0x7ff23b4254c0 'IB auto generated at build
-     time for view with fixed frame' V:|-(164)-[UILabel:0x7ff23b419040'Label']  
-      (Names: '|':UIView:0x7ff23b418c80 )>
-      ... ])
+self.view.constraints = [<_UILayoutSupportConstraint:0x7ff23b418150
+V:[_UILayoutGuide:0x7ff23b4232c0(20)]>, <_UILayoutSupportConstraint:
+0x7ff23b426170 V:|-(0)-[_UILayoutGuide:0x7ff23b4232c0]
+(Names: '|':UIView:0x7ff23b418c80 )>,
+<_UILayoutSupportConstraint:0x7ff23b41b7d0
+V:[_UILayoutGuide:0x7ff23b423f70(0)]>,
+<_UILayoutSupportConstraint:0x7ff23b417860
+_UILayoutGuide:0x7ff23b423f70.bottom == UIView:0x7ff23b418c80.bottom>,
+<NSIBPrototypingLayoutConstraint:0x7ff23b425000 'IB auto generated at build
+time for view with fixed frame' H:|-(129)-[UILabel:0x7ff23b419040'Label']
+(LTR)   (Names: '|':UIView:0x7ff23b418c80 )>,
+<NSIBPrototypingLayoutConstraint:0x7ff23b4254c0 'IB auto generated at build
+time for view with fixed frame' V:|-(164)-[UILabel:0x7ff23b419040'Label']  
+(Names: '|':UIView:0x7ff23b418c80 )>
+... ])
 
 Most of the constraints are using the private `NSIBPrototypingLayoutConstraint` class to define the constraints. If you don't explicitly define the constraints you want your view to take advantage of, Interface Builder will create a suite of `NSIBPrototypingLayoutConstraint` constraints it believes will accomplish what you are trying to lay out.
 

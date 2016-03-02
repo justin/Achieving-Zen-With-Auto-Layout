@@ -56,8 +56,8 @@ The purpose of the code is to center a UIView `orangeBoxView` in its superview w
 Upon rotation, the box remains the same size but is no longer centered in its superview. That's not a bug you caused necessarily. You defined the frame based on the coordinates you were working with at the time you called `setFrame:`. To adjust the box to handle both orientations, however, you need to do a recalculation at the time the frameworks tell you that the device is transitioning to a different size class.
 
 ~~~swift
-override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator
-	 coordinator: UIViewControllerTransitionCoordinator)
+override func viewWillTransitionToSize(size: CGSize,
+	withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator)
 {
 	super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
 	let viewFrame = self.view.bounds

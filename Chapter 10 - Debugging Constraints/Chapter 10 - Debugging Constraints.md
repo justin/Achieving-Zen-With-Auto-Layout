@@ -76,8 +76,7 @@ To do this:
 2.  Open the `ViewController.swift` file and add the following snippet of code to it:
 
 ~~~swift
-override func viewDidLayoutSubviews()
-{
+override func viewDidLayoutSubviews() {
   super.viewDidLayoutSubviews()
 }
 ~~~
@@ -279,15 +278,13 @@ If you didn't in the previous section, create a new Objective-C category file on
 ~~~objectivec
 #ifdef DEBUG
 
-- (NSString *)nsli_description
-{
-    return [self restorationIdentifier] ?: [NSString stringWithFormat:
-      @"%@:%p", [self class], self];
+- (NSString *)nsli_description {
+  return [self restorationIdentifier] ?: [NSString stringWithFormat:
+    @"%@:%p", [self class], self];
 }
 
-- (BOOL)nsli_descriptionIncludesPointer
-{
-    return [self restorationIdentifier] == nil;
+- (BOOL)nsli_descriptionIncludesPointer {
+  return [self restorationIdentifier] == nil;
 }
 
 #endif
@@ -323,12 +320,9 @@ In the DeveloperTown project, create a new Swift extension on `NSLayoutConstrain
 Then, in the `NSLayoutConstraint+ALZExtensions.swift` file, paste the next blob of code into the implementation.
 
 ~~~swift
-extension NSLayoutConstraint
-{
-  func nameForLayoutAttribute(attribute:NSLayoutAttribute) -> String
-  {
-    switch (attribute)
-    {
+extension NSLayoutConstraint {
+  func nameForLayoutAttribute(attribute:NSLayoutAttribute) -> String {
+    switch (attribute) {
     case NSLayoutAttribute.Left: return "left";
     case NSLayoutAttribute.LeftMargin : return "leftMargin";
     case NSLayoutAttribute.Right: return "right";
@@ -354,25 +348,21 @@ extension NSLayoutConstraint
     }
   }
 
-  func debugQuickLookObject() -> AnyObject?
-  {
-      var relation = "EQUALS"
-      if (self.relation == NSLayoutRelation.LessThanOrEqual)
-      {
-          relation = "GREATER THAN OR EQUAL"
-      }
-      else if (self.relation == NSLayoutRelation.Equal)
-      {
-          relation = "LESS THAN OR EQUAL"
-      }
+  func debugQuickLookObject() -> AnyObject? {
+    var relation = "EQUALS"
+    if (self.relation == NSLayoutRelation.LessThanOrEqual) {
+        relation = "GREATER THAN OR EQUAL"
+    } else if (self.relation == NSLayoutRelation.Equal) {
+        relation = "LESS THAN OR EQUAL"
+    }
 
-      return "\n\(firstItem) : \(nameForLayoutAttribute(firstAttribute))" +
+    return "\n\(firstItem) : \(nameForLayoutAttribute(firstAttribute))" +
 
-      "\n\n [ \(relation) ]" +
-      "\n\n\(secondItem) : \(nameForLayoutAttribute(secondAttribute))" +
-      "\n\nPriority:\(priority)" +
-      "\nMultiplier: \(multiplier)" +
-      "\nConstant: \(constant)"
+    "\n\n [ \(relation) ]" +
+    "\n\n\(secondItem) : \(nameForLayoutAttribute(secondAttribute))" +
+    "\n\nPriority:\(priority)" +
+    "\nMultiplier: \(multiplier)" +
+    "\nConstant: \(constant)"
   }
 }
 ~~~

@@ -32,7 +32,7 @@ Fortunately, with iOS 8, Apple added the ability to enable and disable constrain
 
 The first thing I tend to do is disable any existing constraints I know I won't need for a certain size class. You can quickly do this in the sidebar of Interface Builder under the constraints listing for our view controller. To start, select the "Image View.centerX = centerX" constraint. This is the constraint we created in the previous chapter to ensure that our DeveloperTown logo was always centered vertically on the screen. Since we are now moving the image view to the left of our text fields, that's no longer the case.
 
-To disable it, make sure the Identity Inspector is visible. (You can toggle it from the View menu under Utilities > Show Identity Inspector.) You should see the values for our CenterX attribute on the right side of the Xcode window. At the bottom of that inspector, there is a small plus icon and a checkbox that says "Installed." Click the checkbox and then "Any Width | Compact Height (current)."
+To disable it, make sure the Identity Inspector is visible. (You can toggle it from the View menu under Utilities > Show Identity Inspector.) You should see the values for our CenterX attribute on the right side of the Xcode window. At the bottom of that inspector, there is a small plus icon and a checkbox that says "Installed." Click the plus icon and then choose "Any Width | Compact Height (current)."
 
 ![Adjusting constraints per trait collection](./images/ch06-ss03.png)
 
@@ -104,7 +104,7 @@ In general, you should opt for activating and deactivating constraints rather th
 
 ### Summary
 
-In this chapter, we moved our knowledge of size classes from theoretical to practical by adding a different set of constraints for our DeveloperTown screen in the landscape orientation. We also learned how to use the Identity Inspector in iPad to adjust different values on our constraints. Finally, we covered what happens when we activate and deactivate constraints in our views.
+In this chapter, we moved our knowledge of size classes from theoretical to practical by adding a different set of constraints for our DeveloperTown screen in the landscape orientation. We also learned how to use the Identity Inspector in Xcode to adjust different values on our constraints. Finally, we covered what happens when we activate and deactivate constraints in our views.
 
 Next, we are going to continue our deep dive into Auto Layout by writing some code to interact with our constraints.
 

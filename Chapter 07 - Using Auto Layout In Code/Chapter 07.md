@@ -10,8 +10,7 @@ There are still times, however, when we need to either work with existing constr
 Let's go back to our DeveloperTown sample project. Open the `ViewController.swift` file and add the following snippet of code to it.
 
 ~~~swift
-class ViewController: UIViewController
-{
+class ViewController: UIViewController {
   @IBOutlet weak var logoWidthConstraint: NSLayoutConstraint!
 }
 ~~~
@@ -27,10 +26,9 @@ Next, connect that width constraint to our `@IBOutlet` Hold down the Control key
 Let's go back to our `ViewController.swift` file and put a bit of code in to check the value of our constraint when we run our application.
 
 ~~~swift
-override func viewDidLayoutSubviews()
-{
-    super.viewDidLayoutSubviews()
-    print("logoWidthConstraint = \(logoWidthConstraint)")
+override func viewDidLayoutSubviews() {
+  super.viewDidLayoutSubviews()
+  print("logoWidthConstraint = \(logoWidthConstraint)")
 }
 ~~~
 
@@ -42,10 +40,9 @@ All we are doing here is adding a `print()` statement that will print out the va
 What if we decide we want to change the size of the logo constraint? We should probably be doing that in Interface Builder because we are adjusting the constant value, but for the sake of this exercise, let's do it in code. Override `viewDidLoad()` in your view controller and add the following snippet of code:
 
 ~~~swift
-override func viewDidLoad()
-{
-    super.viewDidLoad()
-    logoWidthConstraint.constant = 128
+override func viewDidLoad() {
+  super.viewDidLoad()
+  logoWidthConstraint.constant = 128
 }
 ~~~
 
@@ -56,10 +53,9 @@ When you build and run the application, you'll see that the logo is now bigger t
  The one thing about our logo width constraint is that it is always active, regardless of what our trait collection is. What about holding a reference to a constraint that is only active in certain scenarios, such as when the device is rotated to the landscape orientation? Let's test that out and see what happens. Go ahead and add another `@IBOutlet` to your class.
 
 ~~~swift
-class ViewController: UIViewController
-{
-  @IBOutlet weak var logoWidthConstraint: NSLayoutConstraint!
-  @IBOutlet weak var logoCenterXConstraint: NSLayoutConstraint!
+class ViewController: UIViewController {
+  @IBOutlet var logoWidthConstraint: NSLayoutConstraint!
+  @IBOutlet var logoCenterXConstraint: NSLayoutConstraint!
 }
 ~~~
 
@@ -68,8 +64,7 @@ This time we are adding a reference to our logo's center X constraint, which kee
 Jump back into Interface Builder and make a connection to the "Image View.centerX = centerX" constraint from our View Controller object so that it is attached to the new `logoCenterXConstraint` object. Next, let's go back to our override of `viewDidLayoutSubviews()` and change its implementation to tell us the constraint's activation status.
 
 ~~~swift
-override func viewDidLayoutSubviews()
-{
+override func viewDidLayoutSubviews() {
   super.viewDidLayoutSubviews()
   print("logoCenterXConstraint.active = \(logoCenterXConstraint.active)")
 }
@@ -86,19 +81,17 @@ To get started, open Xcode and create a new "Single View Application" project. N
 We're back to square one with our project. Rather than jumping right into Interface Builder to lay out our UI, let's open `ViewController.swift` instead and define our interface elements.
 
 ~~~swift
-class ViewController: UIViewController
-{
-    var imageView:UIImageView!
-    var emailLabel:UILabel!
-    var emailField:UITextField!
-    var passwordLabel:UILabel!
-    var passwordField:UITextField!
-    var signinButton:UIButton!
+class ViewController: UIViewController {
+  var imageView:UIImageView!
+  var emailLabel:UILabel!
+  var emailField:UITextField!
+  var passwordLabel:UILabel!
+  var passwordField:UITextField!
+  var signinButton:UIButton!
 
-    required init?(coder aDecoder: NSCoder)
-    {
-        super.init(coder: aDecoder)
-    }
+  required init?(coder aDecoder: NSCoder) {
+      super.init(coder: aDecoder)
+  }
 }
 ~~~
 
@@ -107,8 +100,7 @@ As you can see, we have created six different interface elements. You'll also no
 Let's follow through on that contract, and define each of our elements in `viewDidLoad`.
 
 ~~~swift
-override func viewDidLoad()
-{
+override func viewDidLoad() {
   super.viewDidLoad()
   imageView = UIImageView()
   imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -151,20 +143,17 @@ We are setting this value to false for each of our controls because we want to d
 Go ahead and add a new Swift file to your project called `UIView+AutoLayout.swift` and add the following snippet of code to it.
 
 ~~~swift
-extension UIView
-{
-    func usesAutoLayout(usesAutoLayout: Bool)
-    {
-        translatesAutoresizingMaskIntoConstraints = !usesAutoLayout
-    }
+extension UIView {
+  func usesAutoLayout(usesAutoLayout: Bool) {
+    translatesAutoresizingMaskIntoConstraints = !usesAutoLayout
+  }
 }
 ~~~
 
 What we're doing above is creating a new function on `UIView` called `usesAutoLayout()` that we can use to toggle the `translatesAutoresizingMaskIntoConstraints` value for any view in our application. If we apply it to our code, it's a bit easier to understand what we're trying to accomplish.
 
 ~~~swift
-override func viewDidLoad()
-{
+override func viewDidLoad() {
   super.viewDidLoad()
   imageView = UIImageView()
   imageView.usesAutoLayout(true)
@@ -230,21 +219,19 @@ Let's use this method to define the constraints related to our logo image view. 
 First up, let's create a constraint to horizontally center the image view.
 
 ~~~swift
-override func viewDidLoad()
-{
-    super.viewDidLoad()
+override func viewDidLoad() {
+  super.viewDidLoad()
 
-    // Our previously defined views should still be here. Hiding them now for brevity.
+  // Our previously defined views should still be here. Hiding them now for brevity.
 
-    setupConstraints()
+  setupConstraints()
 }
 
-private func setupConstraints()
-{
-    let logoCenterXConstraint = NSLayoutConstraint(item: imageView, attribute:
-        .CenterX, relatedBy: .Equal, toItem: view, attribute: .CenterX,
-        multiplier: 1.0, constant: 0.0)
-    view.addConstraint(logoCenterXConstraint)
+private func setupConstraints() {
+  let logoCenterXConstraint = NSLayoutConstraint(item: imageView, attribute:
+      .CenterX, relatedBy: .Equal, toItem: view, attribute: .CenterX,
+      multiplier: 1.0, constant: 0.0)
+  view.addConstraint(logoCenterXConstraint)
 }
 ~~~
 
@@ -265,20 +252,20 @@ That was a single constraint. We still need to add another three for our logo vi
 ~~~swift
 // Set the top of our image view to be 20 points off the top of our parent view.
 let logoTopPadding = NSLayoutConstraint(item: imageView, attribute: .Top,
-    relatedBy: .Equal, toItem: view, attribute: .Top, multiplier: 1.0,
-    constant: 20.0)
+  relatedBy: .Equal, toItem: view, attribute: .Top, multiplier: 1.0,
+  constant: 20.0)
 view.addConstraint(logoTopPadding)
 
 // We want the logo view to be 96 points wide.
 let logoWidth = NSLayoutConstraint(item: imageView, attribute: .Width,
-    relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute,
-    multiplier: 1.0, constant: 96.0)
+  relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute,
+  multiplier: 1.0, constant: 96.0)
 view.addConstraint(logoWidth)
 
 // We want the logo view to be 96 points tall.
 let logoHeight = NSLayoutConstraint(item: imageView, attribute: .Height,
-    relatedBy: NSLayoutRelation.GreaterThanOrEqual, toItem: nil, attribute:
-    .NotAnAttribute, multiplier: 1.0, constant: 96.0)
+  relatedBy: NSLayoutRelation.GreaterThanOrEqual, toItem: nil, attribute:
+  .NotAnAttribute, multiplier: 1.0, constant: 96.0)
 view.addConstraint(logoHeight)
 ~~~
 
@@ -316,8 +303,8 @@ As you can see, this is way more concise than what we were doing in the previous
 
 ~~~swift
 let emailFieldCenterXConstraint = NSLayoutConstraint(item: emailField,
-    attribute: .CenterX, relatedBy: .Equal, toItem: view, attribute: .CenterX,
-    multiplier: 1.0, constant: 0.0)
+  attribute: .CenterX, relatedBy: .Equal, toItem: view, attribute: .CenterX,
+  multiplier: 1.0, constant: 0.0)
 view.addConstraint(logoCenterXConstraint)
 view.addConstraint(emailFieldCenterXConstraint)
 ~~~
@@ -360,12 +347,12 @@ The first constraint we want to define is a simple one that defines the vertical
 
 ~~~swift
 let views = [
-    "logo" : imageView,
-    "emailLabel" : emailLabel,
-    "emailField" : emailField,
-    "passwordLabel" : passwordLabel,
-    "passwordField" : passwordField,
-    "signinButton" : signinButton
+  "logo" : imageView,
+  "emailLabel" : emailLabel,
+  "emailField" : emailField,
+  "passwordLabel" : passwordLabel,
+  "passwordField" : passwordField,
+  "signinButton" : signinButton
 ]
 
 let verticalLogoConstraints = NSLayoutConstraint.constraintsWithVisualFormat

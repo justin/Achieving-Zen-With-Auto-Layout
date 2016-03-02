@@ -75,12 +75,11 @@ At this point, we shouldn't be throwing any errors in Interface Builder because 
 Open `ViewController.swift`, which should be empty. First up, we need to add a few `@IBOutlet` instances for our four boxes.
 
 ~~~swift
-class ViewController: UIViewController
-{
-    @IBOutlet weak var box1:UIView!
-    @IBOutlet weak var box2:UIView!
-    @IBOutlet weak var box3:UIView!
-    @IBOutlet weak var box4:UIView!
+class ViewController: UIViewController {
+  @IBOutlet var box1:UIView!
+  @IBOutlet var box2:UIView!
+  @IBOutlet var box3:UIView!
+  @IBOutlet var box4:UIView!
 }
 ~~~
 
@@ -95,28 +94,27 @@ let topGuide = UILayoutGuide()
 let centerGuide = UILayoutGuide()
 let bottomGuide = UILayoutGuide()
 
-override func viewDidLoad()
-{
-    super.viewDidLoad()
+override func viewDidLoad() {
+  super.viewDidLoad()
 
-    view.addLayoutGuide(topGuide)
-    view.addLayoutGuide(centerGuide)
-    view.addLayoutGuide(bottomGuide)
+  view.addLayoutGuide(topGuide)
+  view.addLayoutGuide(centerGuide)
+  view.addLayoutGuide(bottomGuide)
 
-    view.addConstraint(box1.bottomAnchor.constraintEqualToAnchor(topGuide.topAnchor))
+  view.addConstraint(box1.bottomAnchor.constraintEqualToAnchor(topGuide.topAnchor))
 
-    view.addConstraint(box2.topAnchor.constraintEqualToAnchor(topGuide.bottomAnchor))
-    view.addConstraint(box2.bottomAnchor.constraintEqualToAnchor(centerGuide.topAnchor))
+  view.addConstraint(box2.topAnchor.constraintEqualToAnchor(topGuide.bottomAnchor))
+  view.addConstraint(box2.bottomAnchor.constraintEqualToAnchor(centerGuide.topAnchor))
 
-    view.addConstraint(box3.topAnchor.constraintEqualToAnchor(centerGuide.bottomAnchor))
-    view.addConstraint(box3.bottomAnchor.constraintEqualToAnchor(bottomGuide.topAnchor))
+  view.addConstraint(box3.topAnchor.constraintEqualToAnchor(centerGuide.bottomAnchor))
+  view.addConstraint(box3.bottomAnchor.constraintEqualToAnchor(bottomGuide.topAnchor))
 
-    view.addConstraint(box4.topAnchor.constraintEqualToAnchor(bottomGuide.bottomAnchor))
+  view.addConstraint(box4.topAnchor.constraintEqualToAnchor(bottomGuide.bottomAnchor))
 
-    view.addConstraint(topGuide.heightAnchor.
-        constraintEqualToAnchor(centerGuide.heightAnchor))
-    view.addConstraint(centerGuide.heightAnchor.
-        constraintEqualToAnchor(bottomGuide.heightAnchor))
+  view.addConstraint(topGuide.heightAnchor.
+      constraintEqualToAnchor(centerGuide.heightAnchor))
+  view.addConstraint(centerGuide.heightAnchor.
+      constraintEqualToAnchor(bottomGuide.heightAnchor))
 }
 ~~~
 
@@ -156,15 +154,14 @@ If you run the application, you'll see our two views pinned to the top of the sc
 We need to get into code to actually center our view how we want. Open up our view controller file and add the following snippet of code.
 
 ~~~swift
-class ViewController: UIViewController
-{
-  @IBOutlet weak var spinner:UIActivityIndicatorView! {
+class ViewController: UIViewController {
+  @IBOutlet var spinner:UIActivityIndicatorView! {
     didSet {
       spinner.startAnimating()
     }
   }
 
-  @IBOutlet weak var label:UILabel!
+  @IBOutlet var label:UILabel!
 
   let layoutContainer = UILayoutGuide()
 }
@@ -177,8 +174,7 @@ Our first line is defining an `@IBOutlet` instance for our activity indicator ca
 Next, we need to override `viewDidLoad()` to add our layout guide to the view and assign our constraints to it.
 
 ~~~swift
-override func viewDidLoad()
-{
+override func viewDidLoad() {
   super.viewDidLoad()
 
   view.addLayoutGuide(layoutContainer)
@@ -213,7 +209,7 @@ One of the less heralded things about iOS 8 is added support for margins on `UIV
 
 The one caveat to layout margins is that you can't set them on a `UIViewController`'s view; those are hardcoded and set to eight points. Any other view on your canvas is fair game, however.
 
-To test this out, create a new single view Xcode project called "Layout Margins" and open its `Main.storyboard" file.
+To test this out, create a new single view Xcode project called "Layout Margins" and open its `Main.storyboard` file.
 
 Inside the storyboard, create two `UIView` instances. On the first box, set the background color to your favorite shade of green. The second box should be your favorite shade of red.  Next, we need to add constraints to our green box.
 
@@ -238,12 +234,12 @@ We can adjust these margin values in two different ways. There are options in In
 Open `ViewController.swift` and add the following snippet of code to your class.
 
 ~~~swift
-@IBOutlet weak var greenBox:UIView! {
-    didSet {
-        greenBox.layoutMargins = UIEdgeInsetsMake(10, 10, 10, 10)
-    }
+@IBOutlet var greenBox:UIView! {
+  didSet {
+    greenBox.layoutMargins = UIEdgeInsetsMake(10, 10, 10, 10)
+  }
 }
-@IBOutlet weak var redBox:UIView!
+@IBOutlet var redBox:UIView!
 ~~~
 
 Next, go back to the storyboard and connect those outlets to their respective views, so we can interact with them in our view controller file.

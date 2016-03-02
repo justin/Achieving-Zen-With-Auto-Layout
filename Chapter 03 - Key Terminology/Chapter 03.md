@@ -99,20 +99,19 @@ Not all views have an intrinsic content size, but things like buttons and labels
 Let's look at an example of this tweet button view. Inside are both a `UIImageView` with the home icon and a `UILabel` that says "Home" in English. In our view subclass, we can override the `intrinsicContentSize` method to calculate and return a value as a `CGSize`.
 
 ~~~swift
-override func intrinsicContentSize() -> CGSize
-{
-    let attributes = [
-        NSFontAttributeName : UIFont.systemFontOfSize(12.0),
-        NSForegroundColorAttributeName : UIColor.blackColor()
-    ]
+override func intrinsicContentSize() -> CGSize {
+  let attributes = [
+    NSFontAttributeName : UIFont.systemFontOfSize(12.0),
+    NSForegroundColorAttributeName : UIColor.blackColor()
+  ]
 
-    let labelSize = self.label.text.sizeWithAttributes(attributes)
-    let imageSize = self.image.size
+  let labelSize = self.label.text.sizeWithAttributes(attributes)
+  let imageSize = self.image.size
 
-    let width = imageSize.width + labelSize.width;
-    let height = max(imageSize.height, labelSize.height);
+  let width = imageSize.width + labelSize.width;
+  let height = max(imageSize.height, labelSize.height);
 
-    return CGSizeMake(width, height)
+  return CGSizeMake(width, height)
 }
 ~~~
 

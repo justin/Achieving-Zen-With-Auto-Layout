@@ -42,27 +42,26 @@ Go ahead and create a new single view iOS Project in Xcode. Call it whatever you
 For this example, we are going to bypass the storyboard and create all our constraints and adjustments using code. To do that, let's open the `ViewController.swift` file and add the following snippet of code:
 
 ~~~swift
-class ViewController: UIViewController
-{
-    var centeredView:UIView! {
-        didSet {
-          centeredView.translatesAutoresizingMaskIntoConstraints = false
-          centeredView.backgroundColor = UIColor.orangeColor()
-        }
-    }
-    var button:UIButton! {
-        didSet {
-          button.translatesAutoresizingMaskIntoConstraints = false
-          button.setTitle("Toggle", forState: .Normal)
-          button.addTarget(self, action: "toggle:",
-            forControlEvents: .TouchUpInside)
-        }
-    }
+class ViewController: UIViewController {
+  var centeredView:UIView! {
+      didSet {
+        centeredView.translatesAutoresizingMaskIntoConstraints = false
+        centeredView.backgroundColor = UIColor.orangeColor()
+      }
+  }
+  var button:UIButton! {
+      didSet {
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Toggle", forState: .Normal)
+        button.addTarget(self, action: "toggle:",
+          forControlEvents: .TouchUpInside)
+      }
+  }
 
-    var centerWidthConstraint:NSLayoutConstraint!
-    var centerHeightConstraint:NSLayoutConstraint!
+  var centerWidthConstraint:NSLayoutConstraint!
+  var centerHeightConstraint:NSLayoutConstraint!
 
-    var zoomed:Bool = false
+  var zoomed:Bool = false
 }
 ~~~
 
@@ -77,23 +76,21 @@ Both of these methods `didSet` calls should be fairly straightforward. The impor
 You'll notice in the `button` that we also define our target and action—a `toggle:` method. Let's add that to our implementation:
 
 ~~~swift
-func toggle(sender: UIButton!)
-{
-    var constant:CGFloat = 0.0
-    if zoomed == true
-    {
-        constant = 100.0
-    }
+func toggle(sender: UIButton!) {
+  var constant:CGFloat = 0.0
+  if zoomed == true {
+    constant = 100.0
+  }
 
-    centerWidthConstraint.constant = constant
-    centerHeightConstraint.constant = constant
+  centerWidthConstraint.constant = constant
+  centerHeightConstraint.constant = constant
 
-    UIView.animateWithDuration(0.1, animations: { () -> Void in
-      self.view.layoutIfNeeded()
-    })
-    { (finished) -> Void in
-      self.zoomed = !self.zoomed
-    }
+  UIView.animateWithDuration(0.1, animations: { () -> Void in
+    self.view.layoutIfNeeded()
+  })
+  { (finished) -> Void in
+    self.zoomed = !self.zoomed
+  }
 }
 ~~~
 
@@ -106,45 +103,44 @@ Finally, we wrap a call of `self.view.layoutIfNeeded()` in a `UIView` animation 
 You'll notice we haven't defined what `centeredWidthConstraint` and `centeredHeightConstraint` are just yet. We'll do that in our `viewDidLoad` method as well as some other constraints we need to get the `centeredView` where we want it on the screen.
 
 ~~~swift
-override func viewDidLoad()
-{
-    super.viewDidLoad()
+override func viewDidLoad() {
+  super.viewDidLoad()
 
-    centeredView = UIView(frame: CGRectZero)
-    view.addSubview(centeredView)
+  centeredView = UIView(frame: CGRectZero)
+  view.addSubview(centeredView)
 
-    button = UIButton(type: .System)
-    view.addSubview(button)
+  button = UIButton(type: .System)
+  view.addSubview(button)
 
-    // Establish the width to be one-half the view width.
-    centerWidthConstraint = NSLayoutConstraint(item: centeredView, attribute:
-        .Width, relatedBy: .Equal, toItem: view, attribute: .Width,
-        multiplier: 0.5, constant: 0.0)
-    view.addConstraint(centerWidthConstraint)
+  // Establish the width to be one-half the view width.
+  centerWidthConstraint = NSLayoutConstraint(item: centeredView, attribute:
+    .Width, relatedBy: .Equal, toItem: view, attribute: .Width,
+    multiplier: 0.5, constant: 0.0)
+  view.addConstraint(centerWidthConstraint)
 
-    // Establish the height to be 25% of the view height.
-    centerHeightConstraint = NSLayoutConstraint(item: centeredView,
-        attribute: .Height, relatedBy: .Equal, toItem: view, attribute: .Height,
-        multiplier: 0.25, constant: 0.0)
-    view.addConstraint(centerHeightConstraint)
+  // Establish the height to be 25% of the view height.
+  centerHeightConstraint = NSLayoutConstraint(item: centeredView,
+    attribute: .Height, relatedBy: .Equal, toItem: view, attribute: .Height,
+    multiplier: 0.25, constant: 0.0)
+  view.addConstraint(centerHeightConstraint)
 
-    // We want our view to be centered horizontally.
-    centeredView.centerXAnchor.constraintEqualToAnchor
-      (view.centerXAnchor).active = true
+  // We want our view to be centered horizontally.
+  centeredView.centerXAnchor.constraintEqualToAnchor
+    (view.centerXAnchor).active = true
 
-    // We want our view to be centered vertically.
-    centeredView.centerYAnchor.constraintEqualToAnchor
-      (view.centerYAnchor).active = true
+  // We want our view to be centered vertically.
+  centeredView.centerYAnchor.constraintEqualToAnchor
+    (view.centerYAnchor).active = true
 
-    let views = [
-        "button" : button
-    ]
+  let views = [
+      "button" : button
+  ]
 
-    view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat
-        ("H:[button]-|", options: .AlignAllRight, metrics: nil, views: views))
-    view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat
-        ("V:[button]-|", options: .AlignAllLastBaseline, metrics: nil,
-        views: views))
+  view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat
+    ("H:[button]-|", options: .AlignAllRight, metrics: nil, views: views))
+  view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat
+    ("V:[button]-|", options: .AlignAllLastBaseline, metrics: nil,
+    views: views))
 }
 ~~~
 
@@ -152,16 +148,16 @@ This is a pretty elaborate method with quite a few constraints. Let's tackle eac
 
 ~~~swift
 centerWidthConstraint = NSLayoutConstraint(item: centeredView,
-    attribute: .Width, relatedBy: .Equal, toItem: view, attribute: .Width,
-    multiplier: 0.5, constant: 0.0)
+  attribute: .Width, relatedBy: .Equal, toItem: view, attribute: .Width,
+  multiplier: 0.5, constant: 0.0)
 ~~~
 
 In our `centerWidthConstraint` constraint, we are telling the Auto Layout engine that we want our `centeredView` to have a width that is one-half of its parent view's width. We do this by setting the multiplier of the constraint to be 0.5 (or 50%).
 
 ~~~swift
 centerHeightConstraint = NSLayoutConstraint(item: centeredView,
-    attribute: .Height, relatedBy: .Equal, toItem: view, attribute: .Height,
-    multiplier: 0.25, constant: 0.0)
+  attribute: .Height, relatedBy: .Equal, toItem: view, attribute: .Height,
+  multiplier: 0.25, constant: 0.0)
 ~~~
 
 We do something similar with our `centerHeightConstraint` constraint. Here, we are telling the Auto Layout engine that we want our `centeredView` to have a height that is one-quarter of its parent view's width. We do this by setting the multiplier of the constraint to be 0.25 (or 25%).
@@ -177,14 +173,14 @@ The next two constraints merely state that we want our `centeredView` to be both
 
 ~~~swift
 let views = [
-    "button" : button
+  "button" : button
 ]
 
 view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat
-    ("H:[button]-|", options: .AlignAllRight, metrics: nil, views: views))
+  ("H:[button]-|", options: .AlignAllRight, metrics: nil, views: views))
 view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat
-    ("V:[button]-|", options: .AlignAllLastBaseline, metrics: nil,
-    views: views))
+  ("V:[button]-|", options: .AlignAllLastBaseline, metrics: nil,
+  views: views))
 ~~~
 
 Finally, we want to add a bit of padding for our `button` along the bottom and right edges of our superview. We do this using the ASCII formatting language provided by Auto Layout.
@@ -210,18 +206,14 @@ If you are still required to support 7, however, the current recommended method 
 In the container view, you'd want to override `layoutSubviews` to adjust the center value after the transform has been applied and the layout operation has made its pass.
 
 ~~~swift
-override func layoutSubviews()
-{
-    super.layoutSubviews()
-    let fixedCenter:CGPoint = {0};
-    if (CGPointEqualToPoint(fixedCenter, CGPointZero))
-    {
-        fixedCenter = myView.center
-    }
-    else
-    {
-        myView.center = fixedCenter
-    }
+override func layoutSubviews() {
+  super.layoutSubviews()
+  let fixedCenter:CGPoint = {0};
+  if (CGPointEqualToPoint(fixedCenter, CGPointZero)) {
+      fixedCenter = myView.center
+  } else {
+      myView.center = fixedCenter
+  }
 }
 ~~~
 
