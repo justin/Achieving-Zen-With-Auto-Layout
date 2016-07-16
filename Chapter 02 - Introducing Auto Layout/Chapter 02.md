@@ -21,11 +21,11 @@ Let's look at a basic example. Let's say that you have a `UILabel` that you want
 
 Auto Layout is about explicitly defining these relationships either in code or with Interface Builder using constraints. A **constraint** is a way to describe the relationship between two views. A constraint can describe things such as the height or width of the view, how far from another view it should be, how to center it, etc. Once you pass these constraints to the Auto Layout engine, it can then go ahead and work its magic.
 
-Auto Layout was introduced in OS X Lion and iOS 6, so it has a few years under its belt thus far. It has been enhanced in subsequent releases of OS X—both at the code and Interface Builder levels—allowing it to handle layouts as basic or as complex as you want to throw at it.
+Auto Layout was introduced in macOS Lion and iOS 6, so it has a few years under its belt thus far. It has been enhanced in subsequent releases of macOS—both at the code and Interface Builder levels—allowing it to handle layouts as basic or as complex as you want to throw at it.
 
 ### Dynamic vs. Absolute Layout
 
-The present-day OS X and iOS operating systems are both based off that NeXTSTEP OS. The Interface Builder you use now has existed in some form since the NeXTSTEP days, although you may not easily recognize it up against the modern Xcode 7 incarnation.
+The present-day macOS and iOS operating systems are both based off that NeXTSTEP OS. The Interface Builder you use now has existed in some form since the NeXTSTEP days, although you may not easily recognize it up against the modern Xcode 7 incarnation.
 
 One of the key features of the Interface Builder paradigm is the concept of Springs & Struts. Springs & Struts allow a developer to easily handle a variety of different layout situations in a static manner. Interface Builder allows you to set specific springs and struts to define how a view or window should resize when faced with the task.
 
@@ -128,7 +128,7 @@ It's not that the traditional absolute layout system was bad necessarily, but th
 
 ![Interface Builder](./images/ch02-ss04.png)
 
-Interface Builder is no doubt part of the secret sauce that makes building apps for OS X and iOS so enjoyable. Rather than being knee-deep in XML layouts or writing a bunch of boilerplate code to create a table view, you can instead drag the table view onto its parent view and set up a majority of its visual attributes.
+Interface Builder is no doubt part of the secret sauce that makes building apps for macOS and iOS so enjoyable. Rather than being knee-deep in XML layouts or writing a bunch of boilerplate code to create a table view, you can instead drag the table view onto its parent view and set up a majority of its visual attributes.
 
 Auto Layout extends the power of Interface Builder by allowing you to define the constraint-based relationships each of your views have visually.
 
@@ -212,7 +212,7 @@ The good news is that Xcode 5's support for Auto Layout was vastly superior to i
 
 #### Steep Learning Curve
 
-Above all else, the Auto Layout system has a steep learning curve because it changes such a fundamental aspect of OS X and iOS development. You're no longer doing manual frame calculations and are instead writing these strange ASCII-Art formatted strings or working with an `NSLayoutConstraint` class method with 7 parameters to keep track of. With iOS 9, Apple has done some work to improve the verbosity of Auto Layout, but the core concepts under the hood remain the same.
+Above all else, the Auto Layout system has a steep learning curve because it changes such a fundamental aspect of macOS and iOS development. You're no longer doing manual frame calculations and are instead writing these strange ASCII-Art formatted strings or working with an `NSLayoutConstraint` class method with 7 parameters to keep track of. With iOS 9, Apple has done some work to improve the verbosity of Auto Layout, but the core concepts under the hood remain the same.
 
 I won't deny that the learning curve is steep, but once everything begins to click, the rewards more than pay off for the early frustration. I only truly embraced and adopted Auto Layout when I forced myself to use it for a major project and refused to fall back on my old knowledge and habits.
 

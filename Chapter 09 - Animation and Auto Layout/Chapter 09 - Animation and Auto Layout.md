@@ -2,7 +2,7 @@
 Chapter 09 - Animation and Auto Layout
 ====================================
 
-With the advent of iOS and modern versions of OS X, animation has become a staple of the development experience. Animations give users a sense of movement and help guide them through the user interfaces we craft. Whether it is the built-in sliding animation when pushing and popping between two view controllers in a navigation stack or something more custom, such as your own keyframe animations between two views, users expect to have smooth transitions between different states in your app.
+With the advent of iOS and modern versions of macOS, animation has become a staple of the development experience. Animations give users a sense of movement and help guide them through the user interfaces we craft. Whether it is the built-in sliding animation when pushing and popping between two view controllers in a navigation stack or something more custom, such as your own keyframe animations between two views, users expect to have smooth transitions between different states in your app.
 
 With Auto Layout, the rules of animation have changed slightly.
 
@@ -221,7 +221,7 @@ If you are using iOS 8 or newer, you can ignore this entire section because tran
 
 ### Summary
 
-We covered how to take advantage of animation while using Auto Layout in our OS X and iOS apps. We addressed reasons why we can no longer animate the frames of our views as well as some gotchas with working with transforms for legacy releases of iOS.
+We covered how to take advantage of animation while using Auto Layout in our macOS and iOS apps. We addressed reasons why we can no longer animate the frames of our views as well as some gotchas with working with transforms for legacy releases of iOS.
 
 In our final chapter, I will walk you through each item in my layout debugging tool belt for those times when your layouts aren't positioning things exactly how you wished.
 

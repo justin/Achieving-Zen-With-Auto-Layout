@@ -279,11 +279,11 @@ Next let's define our constraints for the e-mail address and password text field
 
 ### Layout Anchors
 
-You will no doubt have nightmares about the verbosity of creating constraints using the `NSLayoutConstraint` initializer method. As of iOS 9 and OS X El Capitan, however, there is a better way that can get around that repetitiveness. Apple added a new feature to views called layout anchors.
+You will no doubt have nightmares about the verbosity of creating constraints using the `NSLayoutConstraint` initializer method. As of iOS 9 and macOS El Capitan, however, there is a better way that can get around that repetitiveness. Apple added a new feature to views called layout anchors.
 
 All of the magic of layout anchors is provided by the `NSLayoutAnchor` class, which handles the work of creating individual `NSLayoutConstraint` objects under the hood. Using layout anchors to generate your constraints also provides you an additional piece of type-checking in that it won't allow you to create an invalid constraint—such as constraining the top edge of a view to another attribute in a view that's not in the same hierarchy. If you try to do so, you'll get a compile error.
 
-You shouldn't ever need to interact directly with the `NSLayoutAnchor` class. Both `UIView` on iOS and `NSView` on OS X provide an instance that you can work directly with. Let's see how this works by defining five new constraints for our e-mail address text field and label.
+You shouldn't ever need to interact directly with the `NSLayoutAnchor` class. Both `UIView` on iOS and `NSView` on macOS provide an instance that you can work directly with. Let's see how this works by defining five new constraints for our e-mail address text field and label.
 
 1. The e-mail address text field should be horizontally centered in its parent view.
 2. The e-mail address label's leading edge should equal the leading edge of the e-mail address text field.
@@ -365,7 +365,7 @@ What's going on here? First we are defining a dictionary with value references t
 
 The main line we want to focus on is the `verticalLogoConstraints` variable. We are using a new (to us) method on `NSLayoutConstraint` called `constraintsWithVisualFormat()` that returns an array of constraints. The first parameter of `constraintsWithVisualFormat()` defines the constraints we are going to be creating. There are a few things to point out here.
 
-First, you'll notice the first portion of the constraint definition is "V:". What this is telling Auto Layout is that we are wanting to define constraints on the vertical axis. If we wanted to work with the horizontal axis, we'd use "H:" instead. Next you see a reference to our "logo" key from the `views` dictionary, wrapped inside square brackets. There's also "emailLabel" wrapped in square brackets. Between those two views is a single hyphen "-". The hyphen tells Auto Layout that you want to have the standard amount of space between those two views on our vertical axis. The standard amount of space is defined and managed by iOS and OS X respectively.
+First, you'll notice the first portion of the constraint definition is "V:". What this is telling Auto Layout is that we are wanting to define constraints on the vertical axis. If we wanted to work with the horizontal axis, we'd use "H:" instead. Next you see a reference to our "logo" key from the `views` dictionary, wrapped inside square brackets. There's also "emailLabel" wrapped in square brackets. Between those two views is a single hyphen "-". The hyphen tells Auto Layout that you want to have the standard amount of space between those two views on our vertical axis. The standard amount of space is defined and managed by iOS and macOS respectively.
 
 If you wanted to define a different amount of space between the logo and emailField, you could replace the hyphen with something like `V:[logo]-10-[emailLabel]`, which would add ten points of padding between the two controls on the vertical axis.
 
@@ -421,7 +421,7 @@ Now if we run our application, we can see that everything is laid out exactly ho
 
 ### Summary
 
-In this chapter, we looked at recreating our sign-in screen using Auto Layout constraints defined in code rather than Interface Builder. We started by holding strong references to individual constraints, so we can adjust their constant values or activated status on the fly. We followed up by defining individual `NSLayoutConstraint` instances. We then simplified things using the new layout anchors feature in iOS 9 and OS X El Capitan. Finally, we covered the visual format language that allows us to easily define multiple constraints in a single line.
+In this chapter, we looked at recreating our sign-in screen using Auto Layout constraints defined in code rather than Interface Builder. We started by holding strong references to individual constraints, so we can adjust their constant values or activated status on the fly. We followed up by defining individual `NSLayoutConstraint` instances. We then simplified things using the new layout anchors feature in iOS 9 and macOS El Capitan. Finally, we covered the visual format language that allows us to easily define multiple constraints in a single line.
 
 In the next chapter, we are going to cover a few more advanced code-based uses of Auto Layout: layout guides and margins.
 

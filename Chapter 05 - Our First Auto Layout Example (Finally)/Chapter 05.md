@@ -10,7 +10,7 @@ The first part of our journey into Auto Layout was focused on understanding some
 
 **If you are using Auto Layout, you should be using Interface Builder.** This is one of the most declarative statements I will make in this book, but that's because I am passionate about it.
 
-Interface Builder has always been a great way to lay out your interface, providing a high-level visual overview of what your UI will look like on a user's OS X desktop or iOS device. Rather than requiring you to manage big chunks of tedious layout code, Interface Builder instead does all the heavy loading and lets you focus on the important functionality of your application.
+Interface Builder has always been a great way to lay out your interface, providing a high-level visual overview of what your UI will look like on a user's macOS desktop or iOS device. Rather than requiring you to manage big chunks of tedious layout code, Interface Builder instead does all the heavy loading and lets you focus on the important functionality of your application.
 
 One of the key reasons Auto Layout exists is to extend the usefulness of Interface Builder, and with Xcode 7, that usefulness is even more powerful. Each release of Xcode since version 4 has improved on the Auto Layout support in Interface Builder; as amateur Apple watchers, this should be a pretty obvious sign that Apple thinks this is important technology.
 
@@ -38,7 +38,7 @@ To get started, open Xcode and create a new Single View Application project. Nam
 
 ![Single View Project](./images/ch05-ss04.png)
 
-Once we save DeveloperTown to disk, we are shown a skeleton project with an app delegate, starter view controller, and storyboard. Storyboards are Apple's preferred way of laying out high level interfaces on both iOS and OS X, so let's go ahead and keep that rather than using separate XIB files for our view controllers.
+Once we save DeveloperTown to disk, we are shown a skeleton project with an app delegate, starter view controller, and storyboard. Storyboards are Apple's preferred way of laying out high level interfaces on both iOS and macOS, so let's go ahead and keep that rather than using separate XIB files for our view controllers.
 
 Open _Main.storyboard_, and you'll be presented with an empty square that defines our view controller's scene. If you're a seasoned iOS developer but haven't been working with iOS 8 or newer, this likely looks a little foreign. This is Apple's new concept of **size classes**.
 
@@ -250,7 +250,7 @@ We have our image view back on screen and exactly where we wanted it!
 
 One view down, five to go.
 
-Next, we will focus on the relationship between our labels and the text fields. In our view, you'll notice that we have the left (or leading) edge of the labels lined up with the left edge of our text fields. When working with text, you want to use leading and trailing constraints. By doing this, iOS and OS X are able to account for left-to-right languages when rendering your views on screen.
+Next, we will focus on the relationship between our labels and the text fields. In our view, you'll notice that we have the left (or leading) edge of the labels lined up with the left edge of our text fields. When working with text, you want to use leading and trailing constraints. By doing this, iOS and macOS are able to account for left-to-right languages when rendering your views on screen.
 
 Let's go ahead and make a few explicit constraints to define those relationships.
 

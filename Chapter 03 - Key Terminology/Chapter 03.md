@@ -143,7 +143,7 @@ If the intrinsic content size defines the size of the content that we want to la
 
 An alignment rectangle is useful if you're working with a view that has extra ornamentation, such as a badge on a button that you don't necessarily want to take into account when laying out the control.
 
-In the case of a badged button, you can just override `alignmentRectInsets` in its subclass to return either a `UIEdgeInsets` (iOS) or `NSEdgeInsets` (OS X) to define the alignment rectangle.
+In the case of a badged button, you can just override `alignmentRectInsets` in its subclass to return either a `UIEdgeInsets` (iOS) or `NSEdgeInsets` (macOS) to define the alignment rectangle.
 
 If you need to do something more complex than insetting the full-frame of a view, you can override `frameForAlignmentRect:` to define an actual CGRect or NSRect, depending on which OS you are targeting. UIImage also has a method, `imageWithAlignmentRectInsets`, which you can override to return a new version of the image adjusted by those insets.
 

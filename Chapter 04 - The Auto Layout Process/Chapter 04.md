@@ -46,7 +46,7 @@ You can trigger a measurement pass by calling `setNeedsUpdateConstraints()`, whi
 
 ### Laying Out Views
 
-Once Auto Layout has taken a measurement pass and calculated the values we should have for each of our views, it can go through the actual process of setting those values against the views. For old hands of iOS and OS X development, this is basically an automated way of calling `setFrame()`. The Auto Layout engine calculates those frame values and then simply iterates through our views—from superview down to subview—calling `setFrame:` on each of them.
+Once Auto Layout has taken a measurement pass and calculated the values we should have for each of our views, it can go through the actual process of setting those values against the views. For old hands of iOS and macOS development, this is basically an automated way of calling `setFrame()`. The Auto Layout engine calculates those frame values and then simply iterates through our views—from superview down to subview—calling `setFrame:` on each of them.
 
 If you've elected to use Auto Layout but are still calling `setFrame()` manually, you've likely had the headache of debugging why your view doesn't look exactly like you expect. This is why. **If you're using Auto Layout, you should never call `setFrame()` yourself.** Trust the `NSISEngine` (the private class doing all the layout calculation and management) to do the heavy lifting for you.
 
@@ -60,7 +60,7 @@ It should be noted that each step in the Auto Layout process is iterative, so ev
 
 The final step of the Auto Layout process is the one you are likely most familiar with: actually drawing on screen. We've solved our constraint equations and set our frames to match those values. Now, we actually need to render this all on-screen for our user to interact with.
 
-The drawing process operates from the top down, superview to subview, and actually paints our views on-screen using layoutSubviews() on iOS and layout() on OS X. Here, the system is copying the subview frames that were calculated from the layout engine and applying them to each view in your UI one-by-one.
+The drawing process operates from the top down, superview to subview, and actually paints our views on-screen using layoutSubviews() on iOS and layout() on macOS. Here, the system is copying the subview frames that were calculated from the layout engine and applying them to each view in your UI one-by-one.
 
 You can trigger this step by calling `setNeedsDisplay()`, which notifies the system that you would like the specific view to be redrawn during the next drawing cycle.
 

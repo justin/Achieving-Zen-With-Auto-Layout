@@ -92,7 +92,7 @@ override func viewDidLayoutSubviews() {
 
 At this point, the `UIImageView` should be highlighted with red in our application.
 
-One thing you will notice about this `expression` call is that we are routing things through Objective-C rather than Swift directly. At present time, there are a lot of things related to debugging Swift and Auto Layout that are easier to do with Objective-C. I can only assume this will improve in future releases of OS X and iOS as the Swift languages and LLDB continue to mature.
+One thing you will notice about this `expression` call is that we are routing things through Objective-C rather than Swift directly. At present time, there are a lot of things related to debugging Swift and Auto Layout that are easier to do with Objective-C. I can only assume this will improve in future releases of macOS and iOS as the Swift languages and LLDB continue to mature.
 
 This isn't an Auto Layout-specific debugging technique, but it's one I use often whenever I am working with complex views and only have information about the control type and its memory address.
 
@@ -375,7 +375,7 @@ This may seem like a strange use-case, but if you are holding references to any 
 
 ### Cocoa Layout Instruments
 
-The final tool in my belt is one that I don't believe a lot of developers know about or take advantage of. Instruments added a Cocoa Layout instrument several years ago for OS X developers to see what the Auto Layout engine is doing when your application is running.
+The final tool in my belt is one that I don't believe a lot of developers know about or take advantage of. Instruments added a Cocoa Layout instrument several years ago for macOS developers to see what the Auto Layout engine is doing when your application is running.
 
 What they didn't tell you is that you can also run this instrument in the iOS Simulator to get the same sort of information on your iPhone and iPad apps.
 
@@ -384,7 +384,7 @@ The Cocoa Layout instrument will show each constraint that is added to or remove
 To use the instrument, do the following:
 
 1.  In the _Build_ menu of Xcode, select _Profile._ This will kick off an Instruments session for your application.
-2.  When Instruments opens, select the _Cocoa Layout_ tool from the list of items under _OS X._
+2.  When Instruments opens, select the _Cocoa Layout_ tool from the list of items under _macOS._
 3.  Start recording your Instruments session and watch as the information starts pouring into Instruments about constraints being created and adjusted.
 
 I rarely use this on an everyday basis, but if I'm seeing weird issues with rendering or if something isn't rotating properly, it can be super useful to have a dossier of everything the `NSISEngine` is doing.
