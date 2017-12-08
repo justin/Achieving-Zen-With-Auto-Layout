@@ -24,6 +24,9 @@
 		D08A1B491B506E00000C8A7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D08A1B4B1B506E00000C8A7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0ABBF2B1B63DBCF0052F5C6 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
+		D0B1414B1FDA032800393C57 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		D0B1414C1FDA032800393C57 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		D0B1414D1FDA032800393C57 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +43,9 @@
 		D08A1B331B506E00000C8A7C = {
 			isa = PBXGroup;
 			children = (
-				D08A1B3E1B506E00000C8A7C /* DeveloperTown */,
+				D08A1B3E1B506E00000C8A7C /* Classes */,
+				D0B141491FDA031A00393C57 /* Resources */,
+				D0B1414A1FDA032800393C57 /* Configuration */,
 				D08A1B3D1B506E00000C8A7C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,18 +58,36 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D08A1B3E1B506E00000C8A7C /* DeveloperTown */ = {
+		D08A1B3E1B506E00000C8A7C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				D08A1B3F1B506E00000C8A7C /* AppDelegate.swift */,
 				D08A1B411B506E00000C8A7C /* ViewController.swift */,
 				D0ABBF2B1B63DBCF0052F5C6 /* UIView+AutoLayout.swift */,
 				D08A1B431B506E00000C8A7C /* Main.storyboard */,
-				D08A1B461B506E00000C8A7C /* Assets.xcassets */,
 				D08A1B481B506E00000C8A7C /* LaunchScreen.storyboard */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D0B141491FDA031A00393C57 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D08A1B461B506E00000C8A7C /* Assets.xcassets */,
 				D08A1B4B1B506E00000C8A7C /* Info.plist */,
 			);
-			path = DeveloperTown;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D0B1414A1FDA032800393C57 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				D0B1414B1FDA032800393C57 /* Common.xcconfig */,
+				D0B1414C1FDA032800393C57 /* Debug.xcconfig */,
+				D0B1414D1FDA032800393C57 /* Release.xcconfig */,
+			);
+			name = Configuration;
+			path = ../../Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,11 +116,12 @@
 		D08A1B341B506E00000C8A7C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Second Gear LLC";
 				TargetAttributes = {
 					D08A1B3B1B506E00000C8A7C = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 42LH2U5D35;
 					};
 				};
 			};
@@ -173,13 +197,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -201,7 +233,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -218,13 +250,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -240,9 +280,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -250,22 +291,26 @@
 		};
 		D08A1B4F1B506E00000C8A7C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0B1414C1FDA032800393C57 /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = DeveloperTown/Info.plist;
+				DEVELOPMENT_TEAM = 42LH2U5D35;
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.secondgear.DeveloperTown;
+				PRODUCT_BUNDLE_IDENTIFIER = com.justinwme.autolayoutzen.DeveloperTown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		D08A1B501B506E00000C8A7C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0B1414D1FDA032800393C57 /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = DeveloperTown/Info.plist;
+				DEVELOPMENT_TEAM = 42LH2U5D35;
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.secondgear.DeveloperTown;
+				PRODUCT_BUNDLE_IDENTIFIER = com.justinwme.autolayoutzen.DeveloperTown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

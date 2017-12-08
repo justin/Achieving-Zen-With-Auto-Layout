@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Even_Distribution" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JX4-GU-Xx1">
+                                <rect key="frame" x="87.5" y="20" width="200" height="100"/>
+                                <color key="backgroundColor" red="0.4941176471" green="0.82745098039999998" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="DDo-Vc-AZL"/>
+                                    <constraint firstAttribute="height" constant="100" id="nmj-k4-PHF"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AGi-ck-pGl">
+                                <rect key="frame" x="87.5" y="294.5" width="200" height="100.5"/>
+                                <color key="backgroundColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Pa-GC-Hvt">
+                                <rect key="frame" x="87.5" y="566.5" width="200" height="100.5"/>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CtS-Uw-nXd">
+                                <rect key="frame" x="87.5" y="184.5" width="200" height="100"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.16862745100000001" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JX4-GU-Xx1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="52c-tB-Hly"/>
+                            <constraint firstItem="JX4-GU-Xx1" firstAttribute="width" secondItem="CtS-Uw-nXd" secondAttribute="width" id="5yR-jr-jrW"/>
+                            <constraint firstItem="CtS-Uw-nXd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7m0-XY-hDH"/>
+                            <constraint firstItem="PIo-w0-5iD" firstAttribute="bottom" secondItem="2Pa-GC-Hvt" secondAttribute="bottom" id="8JQ-Iy-xBb"/>
+                            <constraint firstItem="JX4-GU-Xx1" firstAttribute="top" secondItem="PIo-w0-5iD" secondAttribute="top" id="T0g-v7-jJm"/>
+                            <constraint firstItem="AGi-ck-pGl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VhV-9O-vtp"/>
+                            <constraint firstItem="AGi-ck-pGl" firstAttribute="height" secondItem="2Pa-GC-Hvt" secondAttribute="height" id="ZFd-jT-lZe"/>
+                            <constraint firstItem="2Pa-GC-Hvt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dFm-X3-m9t"/>
+                            <constraint firstItem="AGi-ck-pGl" firstAttribute="width" secondItem="2Pa-GC-Hvt" secondAttribute="width" id="fSm-rF-LQV"/>
+                            <constraint firstItem="CtS-Uw-nXd" firstAttribute="top" secondItem="JX4-GU-Xx1" secondAttribute="bottom" constant="64.5" placeholder="YES" id="lvf-I2-afU"/>
+                            <constraint firstItem="JX4-GU-Xx1" firstAttribute="height" secondItem="CtS-Uw-nXd" secondAttribute="height" id="ovr-nL-IOx"/>
+                            <constraint firstItem="CtS-Uw-nXd" firstAttribute="width" secondItem="AGi-ck-pGl" secondAttribute="width" id="qxF-og-bUR"/>
+                            <constraint firstItem="AGi-ck-pGl" firstAttribute="top" secondItem="CtS-Uw-nXd" secondAttribute="bottom" constant="10" placeholder="YES" id="uQD-jf-zB5"/>
+                            <constraint firstItem="CtS-Uw-nXd" firstAttribute="height" secondItem="AGi-ck-pGl" secondAttribute="height" id="v1E-JM-u82"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PIo-w0-5iD"/>
+                    </view>
+                    <connections>
+                        <outlet property="box1" destination="JX4-GU-Xx1" id="cfx-j5-Hf5"/>
+                        <outlet property="box2" destination="CtS-Uw-nXd" id="7ht-h1-rDZ"/>
+                        <outlet property="box3" destination="AGi-ck-pGl" id="woz-rE-skx"/>
+                        <outlet property="box4" destination="2Pa-GC-Hvt" id="f4K-gJ-5lf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="323" y="519"/>
+        </scene>
+    </scenes>
+</document>

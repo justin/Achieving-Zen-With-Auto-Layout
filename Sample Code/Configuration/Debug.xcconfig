@@ -1,0 +1,11 @@
+//
+// This file defines settings that should be enabled for Debug configuration builds.
+//
+
+#include "Common.xcconfig"
+
+// Only build the current architecture.
+ONLY_ACTIVE_ARCH = YES
+
+// Don't do any Swift optimization so developers' lives are easier.
+SWIFT_OPTIMIZATION_LEVEL = -Onone

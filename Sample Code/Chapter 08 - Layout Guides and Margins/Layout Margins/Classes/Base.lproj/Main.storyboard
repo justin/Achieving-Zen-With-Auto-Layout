@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Layout_Margins" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dx2-DJ-i77">
+                                <rect key="frame" x="81.5" y="20" width="212" height="212"/>
+                                <color key="backgroundColor" red="0.4941176471" green="0.82745098039999998" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="212" id="FXI-4k-Z2x"/>
+                                    <constraint firstAttribute="width" secondItem="Dx2-DJ-i77" secondAttribute="height" multiplier="1:1" id="voD-FS-EpE"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7WP-sT-tdl">
+                                <rect key="frame" x="89.5" y="28" width="196" height="196"/>
+                                <color key="backgroundColor" red="0.87450980389999999" green="0.25882352939999997" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7WP-sT-tdl" secondAttribute="height" multiplier="1:1" id="g5D-1N-wrJ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7WP-sT-tdl" firstAttribute="bottom" secondItem="Dx2-DJ-i77" secondAttribute="bottomMargin" id="3Ic-9r-WXW"/>
+                            <constraint firstItem="Dx2-DJ-i77" firstAttribute="centerX" secondItem="7WP-sT-tdl" secondAttribute="centerX" id="98B-og-V9g"/>
+                            <constraint firstItem="7WP-sT-tdl" firstAttribute="leading" secondItem="Dx2-DJ-i77" secondAttribute="leadingMargin" id="DgV-yc-i2W"/>
+                            <constraint firstItem="7WP-sT-tdl" firstAttribute="trailing" secondItem="Dx2-DJ-i77" secondAttribute="trailingMargin" id="Hu8-6D-nRJ"/>
+                            <constraint firstItem="Dx2-DJ-i77" firstAttribute="centerX" secondItem="0z5-NW-XgQ" secondAttribute="centerX" id="O2c-IT-7So"/>
+                            <constraint firstItem="Dx2-DJ-i77" firstAttribute="top" secondItem="0z5-NW-XgQ" secondAttribute="top" id="OXc-zl-1TX"/>
+                            <constraint firstItem="7WP-sT-tdl" firstAttribute="top" secondItem="Dx2-DJ-i77" secondAttribute="topMargin" id="dLD-G2-yOw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0z5-NW-XgQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="greenBox" destination="Dx2-DJ-i77" id="ga0-Ok-LUz"/>
+                        <outlet property="redBox" destination="7WP-sT-tdl" id="pJE-mB-0pv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="377" y="430"/>
+        </scene>
+    </scenes>
+</document>

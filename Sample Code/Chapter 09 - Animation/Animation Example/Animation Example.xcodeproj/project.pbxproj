@@ -15,6 +15,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D0A97DEA1FDB3C0500938F55 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		D0A97DEB1FDB3C0500938F55 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		D0A97DEC1FDB3C0500938F55 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		D0C0FD321B7E7E0D009E41FB /* Animation Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Animation Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C0FD351B7E7E0D009E41FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0C0FD371B7E7E0D009E41FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,10 +38,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D0A97DE81FDB3BF100938F55 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D0C0FD3C1B7E7E0D009E41FB /* Assets.xcassets */,
+				D0C0FD411B7E7E0D009E41FB /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D0A97DE91FDB3C0500938F55 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				D0A97DEA1FDB3C0500938F55 /* Common.xcconfig */,
+				D0A97DEB1FDB3C0500938F55 /* Debug.xcconfig */,
+				D0A97DEC1FDB3C0500938F55 /* Release.xcconfig */,
+			);
+			name = Configuration;
+			path = ../../Configuration;
+			sourceTree = "<group>";
+		};
 		D0C0FD291B7E7E0D009E41FB = {
 			isa = PBXGroup;
 			children = (
-				D0C0FD341B7E7E0D009E41FB /* Animation Example */,
+				D0C0FD341B7E7E0D009E41FB /* Classes */,
+				D0A97DE81FDB3BF100938F55 /* Resources */,
+				D0A97DE91FDB3C0500938F55 /* Configuration */,
 				D0C0FD331B7E7E0D009E41FB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,17 +76,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D0C0FD341B7E7E0D009E41FB /* Animation Example */ = {
+		D0C0FD341B7E7E0D009E41FB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				D0C0FD351B7E7E0D009E41FB /* AppDelegate.swift */,
 				D0C0FD371B7E7E0D009E41FB /* ViewController.swift */,
 				D0C0FD391B7E7E0D009E41FB /* Main.storyboard */,
-				D0C0FD3C1B7E7E0D009E41FB /* Assets.xcassets */,
 				D0C0FD3E1B7E7E0D009E41FB /* LaunchScreen.storyboard */,
-				D0C0FD411B7E7E0D009E41FB /* Info.plist */,
 			);
-			path = "Animation Example";
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,11 +113,12 @@
 		D0C0FD2A1B7E7E0D009E41FB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Second Gear";
 				TargetAttributes = {
 					D0C0FD311B7E7E0D009E41FB = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 42LH2U5D35;
 					};
 				};
 			};
@@ -169,13 +193,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -197,7 +229,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -213,13 +245,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -235,7 +275,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -244,22 +284,26 @@
 		};
 		D0C0FD451B7E7E0D009E41FB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0A97DEB1FDB3C0500938F55 /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "Animation Example/Info.plist";
+				DEVELOPMENT_TEAM = 42LH2U5D35;
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.secondgear.Animation-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.justinwme.autolayoutzen.Animation-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		D0C0FD461B7E7E0D009E41FB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0A97DEC1FDB3C0500938F55 /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "Animation Example/Info.plist";
+				DEVELOPMENT_TEAM = 42LH2U5D35;
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.secondgear.Animation-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.justinwme.autolayoutzen.Animation-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -283,6 +327,7 @@
 				D0C0FD461B7E7E0D009E41FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

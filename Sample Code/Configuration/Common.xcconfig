@@ -1,0 +1,25 @@
+//
+// This file defines common settings that should be enabled for every new
+// project or target.
+//
+
+// Architectures to build
+ARCHS = $(ARCHS_STANDARD)
+
+// We need this so that we can actually get debugging symbols when using Instruments.
+DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
+
+// Disable legacy-compatible header searching
+ALWAYS_SEARCH_USER_PATHS = NO
+
+// Allow module imports.
+CLANG_ENABLE_MODULES = YES
+
+// The current version of Swift we support.
+SWIFT_VERSION = 4.0
+
+// Our current shipping target.
+IPHONEOS_DEPLOYMENT_TARGET = 11.0
+
+// The SDK we are using.
+SDKROOT = iphoneos

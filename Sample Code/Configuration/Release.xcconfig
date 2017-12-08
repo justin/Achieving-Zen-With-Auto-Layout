@@ -1,0 +1,11 @@
+//
+// This file defines settings that should be enabled for Release configuration builds.
+//
+
+#include "Common.xcconfig"
+
+// Build all architectures by default.
+ONLY_ACTIVE_ARCH = NO
+
+// Default to whole module optimization, unless disabled for a specific target.
+SWIFT_OPTIMIZATION_LEVEL = -Owholemodule
