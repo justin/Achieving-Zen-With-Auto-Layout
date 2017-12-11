@@ -15,7 +15,7 @@ end
 
 format = ARGV[0] || 'pdf'
 directory = File.expand_path(File.dirname(__FILE__))
-files = Dir[File.join(directory, 'Chapter*', '*.md')]
+files = Dir[File.join(directory, 'Chapter*', '*.md')].sort
 files.each do |file|
   content = File.open(file, 'r') { |f| f.read }
   content.gsub! /\n\r/, "\n"
@@ -25,8 +25,6 @@ end
 
 cover_path = File.join(directory, "Cover", "Cover-Art.jpg")
 style_path = File.join(directory, "style.css")
-
-puts style_path
 
 metadata = {
   'title' => 'Achieving Zen with Auto Layout',
@@ -43,11 +41,11 @@ unless File.directory?(File.dirname(destination))
   FileUtils.mkdir_p(File.dirname(destination))
 end
 
-output = %Q(pandoc -S -s --smart -o "#{destination}" )
+output = %Q(pandoc -s -f markdown+smart -o "#{destination}" )
 output << %Q(--epub-metadata="#{File.basename(meta_path)}" ) if format == 'epub'
 output << %Q(--epub-cover-image="#{cover_path}" ) if format == 'epub'
-output << %Q(--epub-stylesheet="#{style_path}" ) if format == 'epub'
-output << %Q(--latex-engine=xelatex ) if format == 'pdf'
+output << %Q(--css="#{style_path}" ) if format == 'epub'
+output << %Q(--pdf-engine=xelatex ) if format == 'pdf'
 output << files.map { |f| %Q("#{f}") }.join(' ')
 
 
