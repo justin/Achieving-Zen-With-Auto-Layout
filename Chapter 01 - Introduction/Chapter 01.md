@@ -48,7 +48,7 @@ All of the code samples were written using Xcode 7 and targeted towards macOS El
 
 If you notice something missing or incorrect or factually inaccurate in the book, please file an issue on the public GitHub repository.
 
-[https://github.com/secondgear/Achieving-Zen-With-Auto-Layout][gh]
+[https://github.com/justin/autolayout-zen][gh]
 
 ### Feedback and Questions
 
@@ -56,7 +56,7 @@ If you have any feedback, questions, or topics you wish I had covered in this bo
 
 My goal is to update this book on an ongoing basis with new content when possible, so if you feel like I should have covered a topic, please let me know and I’ll see what I can do. Digital publishing offers the benefit of making books become living documents rather than just a moment in time.
 
-- Email me: [justin@secondgear.io](mailto:justin@secondgear.io)
+- Email me: [justinw@me.com](mailto:justinw@me.com)
 
 [bnr]: http://www.bignerdranch.com/we-write/ios-programming.html
 
@@ -64,6 +64,6 @@ My goal is to update this book on an ongoing basis with new content when possibl
 
 [osx]: http://www.bignerdranch.com/we-write/cocoa-programming.html
 
-[gh]: https://github.com/secondgear/Achieving-Zen-With-Auto-Layout
+[gh]: https://github.com/justin/autolayout-zen
 
 \pagebreak
